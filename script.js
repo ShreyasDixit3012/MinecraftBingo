@@ -1,69 +1,58 @@
 const achievements = {
   easy: [
-    "Open Your Inventory",
-    "Punch a Tree",
-    "Craft a Crafting Table",
-    "Make a Wooden Pickaxe",
-    "Stone Age",
+    "Taking Inventory",
+    "Getting Wood",
+    "Benchmarking",
+    "Time to Mine!",
+    "Hot Topic",
     "Acquire Hardware",
-    "Cook and Eat Steak",
+    "Time to Farm!",
     "Bake Bread",
-    "Plant a Seed",
-    "Craft a Furnace",
-    "Catch a Fish",
-    "Sleep in a Bed",
-    "Mine Coal",
-    "Smelt an Iron Ingot",
-    "Craft a Shield",
-    "Tame a Cat",
-    "Tame a Wolf",
-    "Ride a Boat",
-    "Trade with a Villager",
-    "Craft a Chest"
+    "The Lie",
+    "Getting an Upgrade",
+    "Delicious Fish",
+    "Cow Tipper",
+    "MOAR Tools",
+    "Leader Of The Pack",
+    "Dispense With This",
+    "Repopulation",
+    "Overkill",
+    "Inception"
   ],
   medium: [
-    "Suit Up (Wear Full Iron Armor)",
+    "Time to Strike!",
     "Monster Hunter",
-    "Enchant an Item",
-    "Find a Village",
-    "Brew a Potion",
+    "Sniper Duel",
     "Diamonds!",
-    "Acquire Obsidian",
-    "Construct a Nether Portal",
-    "Find and Mine Redstone",
-    "Ride a Minecart 500 Blocks",
-    "Create a Map",
-    "Breed Two Animals",
-    "Harvest Honey",
-    "Use a Loom",
-    "Craft an Anvil",
-    "Use a Blast Furnace",
-    "Collect a Bucket of Lava",
-    "Find an Amethyst Geode",
-    "Use a Smithing Table",
-    "Cook Kelp"
+    "Enchanter",
+    "Librarian",
+    "Into Fire",
+    "Local Brewery",
+    "The End?",
+    "The End.",
+    "On A Rail",
+    "Adventuring Time",
+    "Overpowered",
+    "When Pigs Fly",
+    "Diamonds to You!",
+    "Return to Sender"
   ],
   hard: [
-    "Enter The End",
-    "Free the End",
-    "Return to Sender",
-    "A Furious Cocktail",
-    "How Did We Get Here?",
-    "Subspace Bubble",
-    "Sniper Duel",
-    "Hero of the Village",
-    "Raid Captain",
-    "Uneasy Alliance",
-    "Arbalistic",
-    "Cover Me in Debris",
-    "Summon the Wither",
-    "Create a Full Beacon",
-    "Explore Every Biome",
-    "Adventuring Time",
-    "Ride a Strider on Lava",
-    "All Effects Applied",
-    "Defeat an Elder Guardian",
-    "Find an Ancient City"
+    "Into the Nether",
+    "Ghast Tear",
+    "Blaze Rod",
+    "Potion",
+    "The Enderdragon",
+    "The Beginning?",
+    "Beaconator",
+    "Zombie Doctor",
+    "The Beginning.",
+    "The End... Again...",
+    "You Need a Mint",
+    "Super Sonic",
+    "Lion Hunter",
+    "Stayin' Frosty",
+    "Chestful of Cobblestone"
   ]
 };
 
@@ -110,11 +99,7 @@ function renderCard(card) {
     title.className = "title";
     title.textContent = item.title;
 
-    const difficulty = document.createElement("div");
-    difficulty.className = "difficulty";
-    difficulty.textContent = item.difficulty.toUpperCase();
-
-    cell.append(title, difficulty);
+    cell.append(title);
     bingoGrid.appendChild(cell);
   });
 }
