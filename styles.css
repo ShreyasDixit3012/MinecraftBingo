@@ -1,0 +1,108 @@
+:root {
+  color-scheme: dark;
+  --bg: #111827;
+  --card-bg: #1f2937;
+  --surface: #111827;
+  --text: #f9fafb;
+  --accent: #22c55e;
+  --easy: #22c55e;
+  --medium: #f59e0b;
+  --hard: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at top, #1f2937, var(--bg));
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  margin-top: 0;
+  opacity: 0.85;
+}
+
+button {
+  background: var(--accent);
+  color: #0b1018;
+  border: none;
+  border-radius: 0.65rem;
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 1rem 0 1.5rem;
+}
+
+button:hover {
+  filter: brightness(1.07);
+}
+
+.bingo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.bingo-cell {
+  min-height: 120px;
+  border-radius: 0.8rem;
+  background: var(--card-bg);
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #374151;
+  text-align: left;
+}
+
+.bingo-cell .difficulty {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.bingo-cell.easy .difficulty {
+  color: var(--easy);
+}
+
+.bingo-cell.medium .difficulty {
+  color: var(--medium);
+}
+
+.bingo-cell.hard .difficulty {
+  color: var(--hard);
+}
+
+.bingo-cell .title {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+@media (max-width: 800px) {
+  .bingo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 450px) {
+  .bingo-grid {
+    grid-template-columns: 1fr;
+  }
+}
